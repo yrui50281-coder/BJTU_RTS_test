@@ -1,3 +1,7 @@
 ﻿cmake-hello/build/
 cmake-hello/hello-static.exe
 opencv-demo/build/
+yolo-demo/runs/
+yolo-demo/train.log
+yolo-demo/yolo11n.pt
+datasets/
