@@ -89,6 +89,10 @@ yolo-demo/train_output/experiment/weights/best.pt
 
 ![YOLO 训练指标](task7-1.png)
 
+训练终端显示模型加载、3 个 epoch 的训练过程、验证过程以及 `best.pt` 的生成路径，说明训练流程已完整执行。
+
+![YOLO 训练终端输出](task7-3.png)
+
 ## 七、识别效果
 
 `val_batch0_pred.jpg` 展示了模型在验证集图像上的预测框和类别标注。虽然本实验使用的是很小的数据集且只训练 3 个 epoch，但已完成从训练到验证预测的完整流程。
