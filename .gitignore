@@ -5,3 +5,11 @@ yolo-demo/runs/
 yolo-demo/train.log
 yolo-demo/yolo11n.pt
 datasets/
+yolo-demo/train_output/experiment/Box*.png
+yolo-demo/train_output/experiment/args.yaml
+yolo-demo/train_output/experiment/confusion_matrix*.png
+yolo-demo/train_output/experiment/labels.jpg
+yolo-demo/train_output/experiment/results.csv
+yolo-demo/train_output/experiment/train_batch*.jpg
+yolo-demo/train_output/experiment/val_batch0_labels.jpg
+yolo-demo/train_output/experiment/weights/last.pt
