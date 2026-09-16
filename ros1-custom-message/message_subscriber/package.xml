@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>message_subscriber</name>
+  <version>0.0.0</version>
+  <description>Custom ROS1 message subscriber.</description>
+  <maintainer email="yrui50281@gmail.com">yr</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_publisher</build_depend>
+  <build_depend>rospy</build_depend>
+  <exec_depend>message_publisher</exec_depend>
+  <exec_depend>rospy</exec_depend>
+</package>
