@@ -45,6 +45,29 @@ python -c "import cv2; print(cv2.__version__)"
 创建文件 `opencv-demo/opencv_demo.py`，代码如下：
 
 ```python
+### CMakeLists.txt
+
+The project also includes `opencv-demo/CMakeLists.txt` so that CMake can configure and run the Python OpenCV program:
+
+```cmake
+cmake_minimum_required(VERSION 3.20)
+
+project(OpenCVDemo LANGUAGES NONE)
+
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+
+add_custom_target(run_opencv_demo
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/opencv_demo.py"
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+    COMMENT "Running OpenCV image processing demo"
+)
+```
+
+`find_package(Python3)` locates the Python interpreter. The `run_opencv_demo` target uses that interpreter to run the OpenCV program.
+
+### opencv_demo.py
+
+```python
 import cv2
 import numpy as np
 
@@ -103,6 +126,20 @@ Created: opencv-original.png, opencv-gray.png, opencv-edges.png
 ### 3. 边缘检测结果
 
 ![边缘检测结果](opencv-demo/opencv-edges.png)
+
+### CMake build and run
+
+Run the following commands in PowerShell:
+
+```powershell
+cd opencv-demo
+cmake -S . -B build -G "MinGW Makefiles"
+cmake --build build --target run_opencv_demo
+```
+
+The output showed `Running OpenCV image processing demo`, `OpenCV image processing finished.` and `Built target run_opencv_demo`, confirming that CMake successfully ran the Python OpenCV program.
+
+![CMake build and run result](task5-1.png)
 
 ## 七、遇到的问题及解决方法
 

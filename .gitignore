@@ -1,2 +1,3 @@
 ﻿cmake-hello/build/
 cmake-hello/hello-static.exe
+opencv-demo/build/
