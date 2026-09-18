@@ -1,0 +1,9 @@
+path: D:/BJTU_RTS_test/official-task7/final_dataset
+train: images/train
+val: images/val
+
+nc: 3
+names:
+  0: blue
+  1: red
+  2: invalid
